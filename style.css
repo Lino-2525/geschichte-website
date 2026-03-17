@@ -7,6 +7,27 @@ body {
     padding-bottom: 80px; 
 }
 
+#wau-message {
+    display: none;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    font-size: clamp(64px, 14vw, 180px);
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    color: #c03434;
+    line-height: 1;
+}
+
+body.wau-mode > * {
+    display: none !important;
+}
+
+body.wau-mode > .page-title,
+body.wau-mode > .hero,
+body.wau-mode > #wau-message {
+    display: block !important;
+}
+
 nav {
     background: rgba(192, 52, 52, 0.8);
     color: white;
@@ -62,6 +83,70 @@ h1, h2, h3 {
     height: auto;
     border-radius: 8px;
     margin: 20px 0;
+}
+
+.image-source-note {
+    display: none;
+    margin: 0;
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 35;
+    clear: none;
+}
+
+.image-source-wrap {
+    position: relative;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.right-image,
+.left-image,
+.content-img {
+    cursor: pointer;
+}
+
+.image-source-wrap.right-wrap {
+    float: right;
+    margin-left: 20px;
+}
+
+.image-source-wrap.left-wrap {
+    float: left;
+    margin-right: 20px;
+}
+
+.image-source-wrap.full-wrap {
+    width: 100%;
+    float: none;
+    margin: 20px 0;
+}
+
+.image-source-wrap.beijing-wrap {
+    width: 420px;
+}
+
+.image-source-wrap .right-image,
+.image-source-wrap .left-image,
+.image-source-wrap .content-img {
+    float: none;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+.image-source-wrap:hover .image-source-note,
+.image-source-note.show-source {
+    display: block;
 }
 
 
@@ -222,6 +307,10 @@ height:12px;
 display:block;
 }
 
+.nav-box-container.open .nav-dropdown {
+display: block;
+}
+
 .nav-dropdown .nav-box{
 padding:12px 26px;
 font-size:20px;
@@ -239,6 +328,15 @@ text-decoration-color:#c03434;
     margin-left: 20px;
     width: 300px;
     height: auto;
+}
+
+.first-image-tall {
+    width: auto;
+    height: 420px;
+}
+
+.beijing-image {
+    width: 420px;
 }
 
 /* Bild links */
@@ -322,6 +420,33 @@ details summary {
         width: min(100%, 360px);
         height: auto;
         margin: 16px auto;
+    }
+
+    .first-image-tall {
+        width: min(100%, 360px);
+        height: auto;
+    }
+
+    .beijing-image {
+        width: min(100%, 420px);
+    }
+
+    .image-source-wrap,
+    .image-source-wrap.right-wrap,
+    .image-source-wrap.left-wrap,
+    .image-source-wrap.full-wrap,
+    .image-source-wrap.beijing-wrap {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 16px auto;
+    }
+
+    .image-source-wrap .image-source-note {
+        left: 8px;
+        right: 8px;
+        top: 8px;
+        width: auto;
     }
 
     .impressum {
