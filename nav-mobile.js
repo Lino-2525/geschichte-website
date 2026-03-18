@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
     var sequence = ["1", "9", "6", "0"];
     var typed = [];
     var wauTimer;
@@ -104,3 +104,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
